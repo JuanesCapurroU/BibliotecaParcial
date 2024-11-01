@@ -18,7 +18,7 @@ public class Cliente {
     private String telefono;
     private String email;
 
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Prestamo> prestamos = new ArrayList<>();
 
     public Cliente() {

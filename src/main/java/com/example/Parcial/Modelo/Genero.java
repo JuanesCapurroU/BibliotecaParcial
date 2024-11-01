@@ -15,7 +15,7 @@ public class Genero {
     private Long idGenero;
     private String nombreGenero;
 
-    @OneToMany(mappedBy = "genero", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "genero", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Libro> libros = new ArrayList<>();
 
     public Genero() {

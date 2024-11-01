@@ -25,7 +25,7 @@ public class Libro {
     @JoinColumn(name = "genero_id")
     private Genero genero;
 
-    @OneToMany(mappedBy = "libro", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "libro", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Prestamo> prestamos = new ArrayList<>();
 
     public Libro() {
